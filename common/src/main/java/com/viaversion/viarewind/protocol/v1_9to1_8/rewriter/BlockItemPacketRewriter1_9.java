@@ -36,6 +36,7 @@ import com.viaversion.viaversion.protocols.v1_8to1_9.data.EntityIds1_8;
 import com.viaversion.viaversion.protocols.v1_8to1_9.data.PotionIdMappings1_9;
 import com.viaversion.viaversion.protocols.v1_8to1_9.packet.ClientboundPackets1_9;
 import com.viaversion.viaversion.protocols.v1_8to1_9.packet.ServerboundPackets1_8;
+import com.viaversion.viaversion.util.IdAndData;
 import com.viaversion.viaversion.util.Key;
 import java.util.HashSet;
 import java.util.Set;
@@ -190,6 +191,17 @@ public class BlockItemPacketRewriter1_9 extends VRBlockItemRewriter<ClientboundP
         enchantmentRewriter = new LegacyEnchantmentRewriter(nbtTagName());
         enchantmentRewriter.registerEnchantment(9, "§7Frost Walker");
         enchantmentRewriter.registerEnchantment(70, "§7Mending");
+    }
+
+    @Override
+    public int handleBlockId(final int rawId) {
+        final int mappedId = super.handleBlockId(rawId);
+        if (IdAndData.getId(mappedId) != 65) {
+            return mappedId;
+        }
+
+        final int data = IdAndData.getData(mappedId);
+        return data >= 2 && data <= 5 ? mappedId : IdAndData.toRawData(65, 2);
     }
 
     @Override
