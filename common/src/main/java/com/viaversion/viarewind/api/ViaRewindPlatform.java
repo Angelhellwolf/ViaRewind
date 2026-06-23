@@ -51,7 +51,7 @@ public interface ViaRewindPlatform {
 
         Via.getManager().getSubPlatforms().add(IMPL_VERSION);
 
-        getLogger().info("Registering protocols...");
+        getLogger().info("正在注册协议...");
         final ProtocolManager protocolManager = Via.getManager().getProtocolManager();
         protocolManager.registerProtocol(new Protocol1_7_6_10To1_7_2_5(), ProtocolVersion.v1_7_2, ProtocolVersion.v1_7_6);
         protocolManager.registerProtocol(new Protocol1_8To1_7_6_10(), ProtocolVersion.v1_7_6, ProtocolVersion.v1_8);

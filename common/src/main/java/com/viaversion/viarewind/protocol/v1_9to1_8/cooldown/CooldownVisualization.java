@@ -45,7 +45,7 @@ public interface CooldownVisualization {
             try {
                 return fromIndicator(ViaRewind.getConfig().getCooldownIndicator());
             } catch (IllegalArgumentException e) {
-                ViaRewind.getPlatform().getLogger().warning("Invalid cooldown-indicator setting");
+                ViaRewind.getPlatform().getLogger().warning("cooldown-indicator 设置无效");
                 return DISABLED;
             }
         }

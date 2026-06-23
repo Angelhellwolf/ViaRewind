@@ -1,44 +1,42 @@
-# If you need help, you can join our Discord - https://viaversion.com/discord
+# 如需帮助，可加入我们的 Discord - https://viaversion.com/discord
 #
-# Specifies how 1.8.x clients should see the cooldown indicator
-# You can choose between TITLE, ACTION_BAR, BOSS_BAR and DISABLED
-# ONLY DISABLE IF YOU HAVE 1.9 COOLDOWN DISABLED ON YOUR SERVER
-# 1.8 PLAYERS MAY ASK WHY PVP IS NOT WORKING OTHERWISE.
-# REQUIRES A SERVER RESTART TO TAKE EFFECT
+# 指定 1.8.x 客户端应如何看到冷却指示器。
+# 可选择 TITLE、ACTION_BAR、BOSS_BAR 和 DISABLED。
+# 仅当你的服务器已禁用 1.9 冷却时才禁用此项。
+# 否则 1.8 玩家可能会询问为什么 PvP 无法正常工作。
+# 需要重启服务器后生效。
 cooldown-indicator: 'TITLE'
 #
-# Replaces Adventure mode with Survival mode for 1.7.x clients
-# Enable this option if your server is using the 'CanDestroy'
-# or 'CanPlaceOn' flags on items
+# 为 1.7.x 客户端将冒险模式替换为生存模式。
+# 如果服务器在物品上使用 'CanDestroy' 或 'CanPlaceOn' 标记，请启用此项。
 replace-adventure: false
 #
-# Whether similar ones should replace 1.9 particles in
-# 1.8 and lower
+# 是否为 1.8 及更低客户端用相似粒子替换 1.9 粒子。
 replace-particles: false
 #
-# Max number of pages for written books before a client gets kicked
+# 成书最大页数，超过后客户端会被踢出。
 max-book-pages: 100
 #
-# Max number of characters in the json (!) string of a book page before a client gets kicked
+# 书页 json (!) 字符串的最大字符数，超过后客户端会被踢出。
 max-book-page-length: 5000
 #
-# Whether to emulate the 1.8+ world border for 1.7.x clients
+# 是否为 1.7.x 客户端模拟 1.8+ 世界边界。
 emulate-world-border: true
 #
-# Always shows a mapped mob's original name, and not only when hovering over it with the cursor.
+# 始终显示已映射生物的原始名称，而不是只在光标悬停时显示。
 always-show-original-mob-name: true
 #
-# The particle to show the world border for the 1.8+ world border for 1.7.x clients
+# 为 1.7.x 客户端显示 1.8+ 世界边界时使用的粒子。
 world-border-particle: 'fireworksSpark'
 #
-# If enabled, 1.8 players on 1.9+ servers can use /offhand to switch items between their main hand and offhand.
+# 启用后，1.8 玩家在 1.9+ 服务器上可使用 /offhand 在主手与副手之间切换物品。
 enable-offhand: true
 #
-# Allows defining the offhand command
+# 允许定义副手切换命令。
 offhand-command: '/offhand'
 #
-# If enabled, 1.8 players on 1.9+ servers will also experience the levitation effect by sending velocity packets.
+# 启用后，1.8 玩家也会通过速度数据包体验漂浮效果。
 emulate-levitation-effect: true
 #
-# If enabled, 1.8 players will handle the player combat packet added in 1.9 by showing the custom death message above the hotbar.
+# 启用后，1.8 玩家会处理 1.9 添加的玩家战斗数据包，并在快捷栏上方显示自定义死亡消息。
 handle-player-combat-packet: true
